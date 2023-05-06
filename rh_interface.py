@@ -130,6 +130,10 @@ def simpleFractionalSellStock(name, amount):
   sell = r.order_sell_fractional_by_price(name, amount)
   return sell
 
+# def getAllStocks():
+#   info = r.stocks.get_all_stocks()
+#   print(info)
+# getAllStocks()
 
 # This function checks if market is open
 def isOpen(name):
