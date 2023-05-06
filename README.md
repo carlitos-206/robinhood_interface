@@ -1,6 +1,12 @@
-# Robinhood Interface with Robin Stocks library
+# Robinhood Interface with the Robin Stocks library
 
 This is an interface with your Robinhood brokerage account
+
+# Robin Stocks
+
+Robin Stocks is a Python library that provides a simple interface for accessing Robinhood's API. You can find the documentation for Robin Stocks at:
+
+https://robin-stocks.readthedocs.io/en/latest/index.html
 
 ## Installation
 
