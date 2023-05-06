@@ -50,7 +50,7 @@ pip install --upgrade pip
 ```
 
 5. Once the installation is complete, create .env file
-6. Add fields to .env files
+6. Add fields to .env file
 ```
 RH_USERNAME = your_username
 RH_PASSWORD = your_password
