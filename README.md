@@ -1,6 +1,6 @@
-# My Project
+# Robinhood Interface with Robin Stocks library
 
-This is a Python project that does something cool.
+This is an interface with your Robinhood brokerage account
 
 ## Installation
 
