@@ -74,9 +74,23 @@ python rh_interface.py
 
 The following packages are required to run this project:
 
-- pandas==1.2.4
-- matplotlib==3.4.2
-- numpy==1.21.0
+- certifi==2022.12.7
+- cffi==1.15.1
+- charset-normalizer==3.1.0
+- cryptography==40.0.2
+- idna==3.4
+- numpy==1.24.3
+- pandas==2.0.1
+- pycparser==2.21
+- pyotp==2.8.0
+- python-dateutil==2.8.2
+- python-dotenv==1.0.0
+- pytz==2023.3
+- requests==2.29.0
+- robin-stocks==2.1.0
+- six==1.16.0
+- tzdata==2023.3
+- urllib3==1.26.15
 
 These packages are included in the `requirements.txt` file, and can be installed using `pip`. You can also use a different package manager, such as `conda`, to install these packages.
 
