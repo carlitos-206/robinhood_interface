@@ -32,47 +32,6 @@ def globalParsing(list):
       
 # ---------------------------------THIS IS THE USER PROFILE SETTINGS------------------------------------
 
-
-# RH Auth -- Returns auth Token
-def logIn(username, password):
-  username = os.getenv('RH_USERNAME') if username == None else username
-  password = os.getenv("RH_PASSWORD") if password == None else password
-  login = r.login(username, password)
-  return login
-
-# This function logs you out
-def logOut():
-  r.logout()
-  return True
-
-# This function views stock holdings
-def getPortolio():
-  my = r.build_holdings()
-  profile = r.build_user_profile()
-  for key, value in my.items():
-    print(key, value)
-  print(profile)
-  return 0
-
-# This function gets a general profile info
-def getGenProfile():
-  profile = r.load_account_profile()
-  return profile
-
-# This function gets crypto profile
-def getCryptoProfile():
-  profile = r.load_crypto_profile()
-  return profile
-
-# This function gets a gen portfolio info
-def getGenPortfolio():
-  profile = r.load_portfolio_profile()
-  return profile
-# To ensure the calls are accepted firs the program must sign in
-# Theres no session token allocates !--! there actually is a token , but how does it work??? <---
-user = logIn(None, None)
-
-
 # ------------------------------------------END--------------------------------------------------------------
 
 
@@ -105,6 +64,7 @@ def getSharePrice(ticker):
     }
   }
 
+# print(getSharePrice('aapl'))
 # This function cancels all stock orders
 def cancelAllStockOrders():
   cancel = r.cancel_all_stock_orders()
@@ -418,7 +378,6 @@ def getCryptoHistory(name, interval, span):
 def getCryptoPrice(name):
   price = r.get_crypto_quote(name)
   return price
-
 # This function buys crypto by money amount
 def simpleBuyCryptoByPrice(name, quantity):
   buy = r.order_buy_crypto_by_price(name, quantity)
@@ -608,7 +567,6 @@ def completeByTypeCSV(order_type):
     return optionCSV(CURRENT_DIR, order_type, today)
   if order_type == "full":
     return fullCSV(CURRENT_DIR, today)
-
 
 
 # ------------------------------------------------- END ------------------------------------------------------
