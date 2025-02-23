@@ -72,8 +72,7 @@ python rh_interface.py
 
 ## Dependencies
 
-The following packages are required to run this project:
-
+- The following packages are required to run this project:
 - certifi==2022.12.7
 - cffi==1.15.1
 - charset-normalizer==3.1.0
@@ -87,7 +86,7 @@ The following packages are required to run this project:
 - python-dotenv==1.0.0
 - pytz==2023.3
 - requests==2.29.0
-- robin-stocks==2.1.0
+- robin-stocks==3.3.1
 - six==1.16.0
 - tzdata==2023.3
 - urllib3==1.26.15
