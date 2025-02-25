@@ -1,3 +1,8 @@
+# This file contains global functions
+
+import time
+
+# This function parses list to be view in terminal
 def globalParsing(list):
   if isinstance(list, dict):
     for k , v in list.items():

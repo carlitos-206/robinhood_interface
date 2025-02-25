@@ -1,3 +1,6 @@
+# This file contains logic to clean raw data coming in from RH
+
+# This function cleans incoming raw data from RH
 def clean_robinhood_data(raw_data):
     """
     Cleans & structures the raw list of dictionaries/lists into a single dict.

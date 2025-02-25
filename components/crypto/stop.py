@@ -1,6 +1,8 @@
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# This file contain logic to stop buy/sell order of crypto available in RH
+
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
 # This function cancels crypto order by ID
 def cancelOrderByID(id):
