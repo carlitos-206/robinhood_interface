@@ -9,6 +9,7 @@ from components.auth.login import logIn
 from components.crypto.info import getCryptoPrice
 from components.user_portfolio.profile import get_user_profile
 from components.data_cleaners.profile_cleaner import clean_robinhood_data
+
 def doge_coin():
     print("Starting func1")
     print(getCryptoPrice('DOGE'))
