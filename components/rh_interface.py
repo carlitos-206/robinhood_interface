@@ -48,17 +48,6 @@ def globalParsing(list):
 # ---------------------------------THIS IS FOR BUYING AND SELLING STOCKS ------------------------------------
 
 
-
-# This function buys stocks by share count
-def simpleBuyStockByShare(name, count):
-  order = r.order_buy_market(name, count)
-  return order
-
-# This function buys fractional stocks by price
-def simpleFractionalBuyStock(name, amount):
-  order = r.order_buy_fractional_by_price(name, amount)
-  return order
-
 # This function sells full share for stocks
 def simpleShareSellStock(name, count):
   sell = r.order_sell_market(name, count)
@@ -70,105 +59,7 @@ def simpleFractionalSellStock(name, amount):
   return sell
 
 
-# This function gets the market in which the symbol belongs too
-def getMarketBySymbol(name):
-  try:
-    if isinstance(name, str): # the symbol must be in string format
-      share = r.stocks.find_instrument_data(name) # querys for stock in the api
-      url = share[0]['market']
-      res = r.get_instrument_by_url(url)
-      market = res['name']
-      return market
-    else:
-      return False # The call was empty or a int or error
-  except TypeError:
-    return False # The call was empty or a int or error
 
-# This function buys a share in a stock only if market is open
-def buyShareIfOpen(name, count): 
-  market = getMarketBySymbol(name)
-  if market != False:
-    is_open = isOpen(market)
-    if is_open == True:
-      buy = simpleBuyStockByShare(name, count)
-      return {
-        "status": 200,
-        "message": buy
-      }
-    else:
-      return {
-        "status": 405, # Method not allowed
-        "message": "Market is closed"
-      }
-  return {
-    "status": 404,
-    "message": "Invalid Symbol"
-  }
-  
-# This function buys fractional stocks if market is open
-def buyFractionalIfOpen(name, amount):
-  market = getMarketBySymbol(name)
-  if market != False:
-    is_open = isOpen(market)
-    if is_open == True:
-      buy = simpleFractionalBuyStock(name, amount)
-      return {
-        "status": 200,
-        "message": buy
-      }
-    else:
-      return {
-        "status": 405, # Method not allowed
-        "message": "Market is closed"
-      }
-  return {
-    "status": 404,
-    "message": "Invalid Symbol"
-  }
-
-# This function buys a stock share at market open
-def buyShareAtMarketOpens(name, count):
-  market = getMarketBySymbol(name)
-  if market != False:
-    buy = simpleBuyStockByShare(name, count)
-    return {
-      "status":200,
-      "message": buy
-    }
-  return {
-      "status": 404,
-      "message": "Invalid Symbol"
-  }
-
-
-# This function buys a fractional stock at market open
-def buyFractionalAtMarketOpens(name, amount):
-  market = getMarketBySymbol(name)
-  if market != False:
-    buy = simpleFractionalBuyStock(name, amount)
-    return {
-      "status":200,
-      "message": buy
-    }
-  return {
-      "status": 404,
-      "message": "Invalid Symbol"
-  }
-
-
-# This function buys at a preset dip
-def buyAtDip(name, count, price):
-  market = getMarketBySymbol(name)
-  if market != False:
-    buy = r.order_buy_limit(name, count, price)
-    return {
-      "status": 200,
-      "message": buy
-    }
-  return {
-    "status": 404,
-    "message": "Invalid Symbol"
-  }
 
 
 # This function sells a stocks if market is open

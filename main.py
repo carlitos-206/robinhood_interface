@@ -6,7 +6,7 @@ from robin_stocks import * # first import the library
 import robin_stocks.robinhood as r # import the
 
 from components.auth.login import logIn
-from components.rh_interface import getCryptoPrice
+from components.crypto.info import getCryptoPrice
 from components.user_portfolio.profile import get_user_profile
 from components.data_cleaners.profile_cleaner import clean_robinhood_data
 def doge_coin():
