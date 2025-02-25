@@ -1,6 +1,8 @@
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# This file contains logic to retrieve user information
+
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
 # This function views stock holdings
 def getPortolio():

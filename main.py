@@ -1,10 +1,13 @@
-import time
-import threading
-import os
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# This file is main file that launches the AI Agents
 
+import threading
+import time
+
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
+
+# Custom Modules
 from components.auth.login import logIn
 from components.crypto.info import getCryptoPrice
 from components.user_portfolio.profile import get_user_profile

@@ -1,17 +1,13 @@
-# built in mods
+# This file contains functions that export RH info to CSV files
+
 import os
-import time
-from datetime import date, datetime, timezone
-import pytz
-import glob
 
-# External  Libs
+# Pandas Library
 import pandas as pd
-import requests
 
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
 
 # This function gets crypto transanctions and converts it to csv

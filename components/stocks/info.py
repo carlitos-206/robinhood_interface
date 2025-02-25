@@ -1,9 +1,11 @@
-from datetime import date, datetime, timezone
+# This file contains logic to retrive information on stocks available in RH
+
+from datetime import date, datetime
 import pytz
 
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
 # This function gets the price of a share
 def getSharePrice(ticker):
@@ -82,8 +84,8 @@ def getMarketBySymbol(name):
 
 
 
-# This function gets all available stocks in RH --- avoid this function
-def getAllStocks():
-  info = r.stocks.get_all_stocks()
-  print(info)
-getAllStocks()
+# # This function gets all available stocks in RH --- avoid this function
+# def getAllStocks():
+#   info = r.stocks.get_all_stocks()
+#   print(info)
+# getAllStocks()

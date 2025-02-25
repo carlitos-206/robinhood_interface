@@ -1,18 +1,17 @@
-# built in mods
+# This file contains logic to export user profile to a CSV file
+
 import os
-import time
-from datetime import date, datetime, timezone
-import pytz
-import glob
+from datetime import datetime
+
 
 # External  Libs
 import pandas as pd
-import requests
 
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
+# Custom Modules
 from crypto.fileExport import cryptoCSV
 from stocks.fileExport import stockCSV
 from options.fileExport import optionCSV

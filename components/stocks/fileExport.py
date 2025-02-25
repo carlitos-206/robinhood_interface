@@ -1,17 +1,13 @@
-# built in mods
+# This file contains logic to export stock information from RH into a CSV file
+
 import os
-import time
-from datetime import date, datetime, timezone
-import pytz
-import glob
 
 # External  Libs
 import pandas as pd
-import requests
 
-# This this the library that allows access to robinhood
-from robin_stocks import * # first import the library
-import robin_stocks.robinhood as r # import the
+# Robin Stocks Library
+from robin_stocks import * 
+import robin_stocks.robinhood as r 
 
 # This function gets stocks transanctions and converts it to csv
 def stockCSV(CURRENT_DIR, order_type, today):
